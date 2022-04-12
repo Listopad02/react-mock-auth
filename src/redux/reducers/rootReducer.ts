@@ -2,7 +2,7 @@ import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk"
 
 interface stateTypes {
-    result: string
+    users: string[]
 }
 interface ActionOne {
     type: 'TEST';
@@ -15,7 +15,7 @@ interface ActionTwo {
 type Action = ActionOne | ActionTwo
 
 const initialState: stateTypes = {
-    result: 'test'
+    users: []
 }
 
 const rootReducer = (state = initialState, action: Action) => {
